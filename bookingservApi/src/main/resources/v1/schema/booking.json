@@ -1,0 +1,89 @@
+{
+  "title": "Booking resource",
+  "description": "Booking resource object",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Booking id",
+      "type": "integer"
+    },
+    "first_name": {
+      "description": "First name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "last_name": {
+      "description": "Last name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "dob": {
+      "description": "Date of Birth",
+      "type": "Date"
+    },
+    "checkin_datetime": {
+      "description": "Check in Date time",
+      "type": "Datetime"
+    },
+    "checkout_datetime": {
+      "description": "Checkout Date time",
+      "type": "Datetime"
+    },
+    "total_price": {
+      "description": "Total Price",
+      "type": "float"
+    },
+    "deposit": {
+      "description": "Deposit",
+      "type": "float"
+    },
+    "address": {
+      "line1": {
+        "description": "line1",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255
+      },
+      "line2": {
+        "description": "line2",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255
+      },
+      "city": {
+        "description": "city",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 45
+      },
+      "state": {
+        "description": "state",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 45
+      },
+      "zip_code": {
+        "description": "Zip Code",
+        "type": "integer"
+      }
+    },
+    "requied": [
+      "line1",
+      "city",
+      "state",
+      "zip_code"
+    ]
+  },
+  "required": [
+    "first_name",
+    "last_name",
+    "dob",
+    "checkin_datetime",
+    "checkout_datetime",
+    "total_price",
+    "deposit",
+    "address"
+  ]
+}
